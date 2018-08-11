@@ -74,7 +74,7 @@ ITM 6 3,2
 ITM 7 11,6
 EXT 0,15 0 12,11
 EXT 2,11 4 0,11
-EXT 3,2 5 8,7
+EXT 3,2 5 0,14
 EXT 11,6 6 7,6
 PAL 1
 
@@ -161,7 +161,7 @@ PAL 2
 ROOM 5
 m,m,m,m,m,m,m,m,m,m,m,m,m,m,m,m
 m,m,m,m,m,m,m,v,w,m,m,m,m,m,m,m
-0,0,0,0,0,0,x,z,z,y,0,0,0,0,0,m
+0,0,0,0,0,0,x,z,z,y,0,0,0,0,0,0
 u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u
 u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u
 u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u
@@ -176,6 +176,10 @@ u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u
 0,0,0,0,0,0,0,10,0,0,0,0,0,0,0,0
 0,0,0,0,11,0,0,0,0,0,0,0,0,0,0,11
 NAME planet 2
+EXT 15,12 a 0,12
+EXT 15,13 a 0,13
+EXT 15,14 a 0,14
+EXT 15,15 a 0,15
 PAL 3
 
 ROOM 6
@@ -231,21 +235,21 @@ PAL 2
 
 ROOM 8
 r,0,r,r,r,0,0,0,0,r,r,0,r,r,r,0
-r,0,r,r,r,r,r,0,r,r,r,r,r,r,r,r
-r,t,r,r,r,r,m,k,m,r,r,r,t,r,r,r
-r,r,r,r,r,r,m,k,m,r,r,r,r,r,r,r
-r,r,r,t,r,r,m,k,m,t,r,r,r,r,r,r
-r,r,r,r,r,r,m,k,m,r,r,r,r,r,r,r
-t,r,r,r,r,r,m,k,m,r,r,r,r,r,r,r
-r,r,r,r,t,r,m,k,m,r,r,r,r,r,t,r
-r,r,r,r,r,r,m,k,m,r,r,r,r,r,r,r
-r,r,r,r,r,r,m,k,m,t,r,r,r,r,r,r
-t,r,r,t,r,r,m,k,m,r,r,r,t,r,r,r
-t,r,r,r,r,t,m,k,m,r,r,r,t,r,t,r
-r,r,r,r,r,m,m,k,m,m,r,r,r,r,r,r
-r,r,r,r,r,m,m,k,m,m,r,r,r,r,r,t
-r,r,t,r,r,0,0,k,0,0,r,r,r,r,r,r
-r,r,r,r,r,r,r,r,r,r,t,t,r,r,r,r
+r,0,r,r,r,12,12,0,12,12,r,r,r,r,r,r
+r,t,r,r,r,12,m,k,m,12,r,r,t,r,r,r
+r,r,r,r,r,12,m,k,m,12,r,r,r,r,r,r
+r,r,r,t,r,12,m,k,m,12,r,r,r,r,r,r
+r,r,r,r,r,12,m,k,m,12,r,r,r,r,r,r
+t,r,r,r,r,12,m,k,m,12,r,r,r,r,r,r
+r,r,r,r,t,12,m,k,m,12,r,r,r,r,t,r
+r,r,r,r,r,12,m,k,m,12,r,r,r,r,r,r
+r,r,r,r,r,12,m,k,m,12,r,r,r,r,r,r
+t,r,r,t,r,12,m,k,m,12,r,r,t,r,r,r
+t,r,r,r,r,12,m,k,m,12,12,r,t,r,t,r
+r,r,r,r,12,m,m,k,m,m,12,r,r,r,r,r
+r,r,r,r,12,m,m,k,m,m,12,r,r,r,r,t
+r,r,t,r,12,0,0,k,0,0,12,r,r,r,r,r
+r,r,r,r,12,12,12,12,12,12,t,t,r,r,r,r
 NAME planet 1 pit
 EXT 7,1 4 6,13
 PAL 2
@@ -254,19 +258,19 @@ ROOM 9
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 r,r,r,r,0,0,0,0,0,0,0,0,0,r,r,0
-r,0,0,r,0,0,r,k,r,0,0,0,r,r,r,r
-0,0,0,r,r,r,r,k,r,r,r,r,r,0,0,0
-0,0,0,0,0,r,0,k,0,0,0,r,0,0,0,0
-0,0,0,r,r,r,0,k,0,0,0,r,r,0,0,0
-0,r,r,r,0,0,0,k,0,0,0,0,r,0,0,0
-0,r,r,0,0,0,0,k,0,0,0,0,r,0,0,0
-0,0,r,0,0,0,0,k,0,0,0,0,r,0,0,0
-0,0,r,0,0,0,0,k,0,r,r,r,r,0,0,0
-0,0,r,r,r,r,r,r,r,r,0,0,0,0,0,0
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+r,r,r,r,0,0,12,k,12,0,0,0,r,t,r,r
+t,r,r,r,t,r,12,k,12,12,12,r,r,r,r,r
+r,t,r,t,r,12,0,k,0,0,0,12,r,r,r,r
+r,r,r,12,12,12,0,k,0,0,0,12,12,t,t,r
+r,r,r,12,0,0,0,k,0,0,0,0,12,r,r,r
+r,r,12,0,0,0,0,k,0,0,0,0,12,r,r,r
+r,r,12,0,0,0,0,k,0,0,0,0,12,r,r,r
+t,r,12,0,0,0,0,k,0,12,12,12,12,r,r,r
+r,t,r,12,12,12,12,12,12,12,r,r,r,r,t,r
+r,r,r,r,r,r,r,r,r,r,r,r,r,r,r,r
+r,r,r,r,r,t,r,r,r,r,r,t,r,t,t,r
+r,r,t,r,r,r,r,r,r,r,r,r,r,r,r,r
+r,r,r,r,r,r,r,r,t,r,r,r,r,t,r,r
 NAME planet 1 pit 2
 ITM a 3,8
 ITM a 3,9
@@ -299,9 +303,33 @@ ITM a 6,9
 ITM a 6,8
 ITM a 5,8
 ITM a 5,7
-ITM a 7,3
 EXT 7,3 7 13,14
 PAL 2
+
+ROOM a
+m,m,m,m,m,m,m,m,m,m,m,m,m,m,m,m
+m,m,m,m,m,m,m,v,w,m,m,m,m,m,m,m
+0,0,0,0,0,0,x,z,z,y,0,0,0,0,0,0
+u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u
+u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u
+u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u
+u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u
+u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u
+u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u
+u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u
+u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u
+u,u,u,u,u,u,u,u,u,u,u,u,u,u,u,u
+0,0,0,0,0,0,0,0,11,0,0,10,0,0,0,0
+0,0,10,11,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,10,0,0,0,0,0,0,0,0
+0,0,0,0,11,0,0,0,0,0,0,0,0,0,0,11
+NAME planet 2a
+ITM 2 6,12
+EXT 0,12 5 15,12
+EXT 0,13 5 15,13
+EXT 0,14 5 15,14
+EXT 0,15 5 15,15
+PAL 3
 
 TIL 10
 00000000
@@ -324,6 +352,18 @@ TIL 11
 10100000
 11100000
 NAME pebbles 2
+
+TIL 12
+00000000
+00000000
+00010000
+00111011
+10100110
+01010101
+10101011
+01101010
+NAME rock wall
+WAL true
 
 TIL a
 11111111
@@ -585,6 +625,7 @@ TIL u
 11101110
 00000000
 NAME water
+WAL true
 
 TIL v
 00000000
@@ -755,7 +796,6 @@ SPR l
 10000001
 11111111
 00011000
-POS 3 12,7
 
 SPR m
 00010000
@@ -972,7 +1012,7 @@ DLG SPR_5
 What's this? Another hidden pit?
 
 DLG ITM_2
-{hasBottle = 1}
+{hasBottle = 1}{bottle = bottle + 1}
 
 DLG ITM_4
 """
@@ -980,13 +1020,13 @@ DLG ITM_4
   - bottleMessage == 0 ?
     You've never seen so many bottles of Nebula Rum in one place before. {bottleMessage = bottleMessage + 1}
     {bottle = bottle + 1}
-  - bottleMessage == 1 ?
+  - bottleMessage == 2 ?
     It's very very illegal... {bottleMessage = bottleMessage + 1}
     {bottle = bottle + 1}
-  - bottleMessage == 2 ?
+  - bottleMessage == 6 ?
     This must be some other smuggler's secret stash. {bottleMessage = bottleMessage + 1}
     {bottle = bottle + 1}
-  - bottleMessage == 3 ?
+  - bottleMessage == 10 ?
     You'd better get out of here as quick as you can! {bottleMessage = bottleMessage + 1}
     {bottle = bottle + 1}
   - else ?
