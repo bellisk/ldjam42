@@ -744,7 +744,6 @@ SPR k
 00111100
 01111110
 DLG SPR_2
-POS 3 3,2
 
 SPR l
 11100111
@@ -755,7 +754,6 @@ SPR l
 10000001
 11111111
 00011000
-POS 3 12,7
 
 SPR m
 00010000
@@ -766,7 +764,6 @@ SPR m
 01010100
 01101100
 01111100
-POS 3 3,12
 
 SPR n
 00000000
@@ -779,7 +776,6 @@ SPR n
 00100100
 NAME cat-telephone
 DLG SPR_1
-POS 3 3,7
 
 SPR o
 11111111
@@ -792,7 +788,6 @@ SPR o
 00011000
 NAME sign 1
 DLG SPR_4
-POS 4 5,12
 
 SPR p
 11111111
@@ -805,7 +800,6 @@ SPR p
 00011000
 NAME sign 2
 DLG SPR_5
-POS 7 12,13
 
 ITM 0
 00000000
@@ -963,7 +957,7 @@ USEFUL TIPS FOR SPACE SMUGGLERS{shuffle
 """
 
 DLG ITM_3
-Your space shuttle gets you back to the ship in no time!
+Space shuttle ready for liftoff!
 
 DLG SPR_4
 The writing on the old sign has faded, but underneath it the ground is disturbed...
