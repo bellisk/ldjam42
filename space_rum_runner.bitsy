@@ -112,17 +112,10 @@ m,m,m,m,m,m,k,m,m,k,m,m,m,m,m,m
 m,m,m,m,m,m,k,m,m,k,m,m,m,m,m,m
 j,0,0,0,0,0,k,0,0,k,0,0,0,0,0,0
 NAME storage
-ITM 0 5,11
-ITM 1 4,11
-ITM 1 3,11
-ITM 1 2,11
-ITM 1 1,11
-ITM 1 0,11
-ITM 2 10,11
-ITM 3 10,7
-ITM 4 11,11
+ITM l 10,11
+ITM m 10,7
+ITM n 5,7
 EXT 0,15 0 3,8
-END undefined 5,11
 PAL 0
 
 ROOM 3
@@ -1806,18 +1799,6 @@ NAME cat bedroom
 DLG SPR_s
 POS m 8,13
 
-SPR 19
-00000000
-00000000
-00000000
-00000000
-00000000
-00000000
-00000000
-00000000
-NAME calculating end text
-POS m 6,12
-
 SPR A
 01000010
 01100110
@@ -2124,16 +2105,6 @@ SPR z
 DLG SPR_h
 POS g 2,12
 
-SPR 1a
-00000000
-00000000
-00000000
-00000000
-00000000
-00000000
-00000000
-00000000
-
 SPR 1b
 00011000
 00011000
@@ -2143,8 +2114,9 @@ SPR 1b
 01000010
 01000010
 01111110
+NAME bottle
 DLG SPR_t
-POS 2 4,11
+POS 2 5,11
 
 ITM 1
 00011000
@@ -2404,6 +2376,28 @@ ITM k
 11111111
 01111110
 01000010
+
+ITM l
+00111000
+01000100
+10101010
+10101010
+10010010
+11000110
+01000100
+01111100
+DLG ITM_g
+
+ITM n
+00000100
+00011111
+11010001
+01011111
+01010001
+01110001
+00110001
+00111111
+DLG ITM_i
 
 DLG SPR_0
 """
@@ -2735,6 +2729,15 @@ Good evening, Captain! If you go to bed, you'll end the game and see your final 
 
 DLG SPR_t
 You have {print bottle} bottles of highly illegal Nebula rum!
+
+DLG ITM_g
+You have {print skull} disgusting human skull(s)!
+
+DLG ITM_h
+You have {print diamond} shiny, mysterious diamonds!
+
+DLG ITM_i
+You have {print coffeepot} delicious hot pots of coffee!
 
 END 0
 
