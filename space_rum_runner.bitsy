@@ -60,7 +60,7 @@ PAL 0
 ROOM 1
 c,0,0,0,0,0,0,0,0,0,0,b,0,0,0,0
 0,0,b,0,c,0,0,b,0,0,0,c,0,0,b,0
-0,0,0,o,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,o,0,0,0,0,0,0,0,0,1e,0,0,0
 0,0,0,0,0,b,0,0,b,0,0,0,0,0,0,c
 0,c,0,0,c,0,0,0,0,0,0,0,b,0,0,0
 0,0,b,0,0,0,0,0,0,0,0,0,c,0,0,0
@@ -396,41 +396,41 @@ EXT 11,0 b 11,15
 PAL 3
 
 ROOM d
-0,b,0,0,0,t,t,t,t,t,t,t,t,0,c,0
-0,0,0,0,t,t,t,t,t,t,t,t,t,t,t,0
-0,0,t,t,t,t,t,t,t,t,t,t,t,1f,1f,t
-c,0,t,t,t,t,t,t,t,t,t,t,t,1f,1f,t
-0,t,t,t,t,t,t,t,t,t,t,t,t,1f,1f,t
+0,b,0,m,m,t,t,t,t,t,t,t,t,m,c,m
+0,m,m,m,t,t,t,t,t,t,t,t,t,t,t,m
+0,m,t,t,t,t,t,t,t,t,t,t,t,1f,1f,t
+c,m,t,t,t,t,t,t,t,t,t,t,t,1f,1f,t
+m,t,t,t,t,t,t,t,t,t,t,t,t,1f,1f,t
 t,t,t,t,t,t,t,1g,t,t,t,t,t,1f,1f,t
 t,t,t,t,t,t,t,t,t,t,t,t,1f,1f,0,t
 t,t,t,t,t,t,t,t,t,t,t,1f,1f,1f,0,t
-t,t,t,t,t,t,t,t,t,t,t,1f,1f,0,0,ta
-t,t,t,t,t,t,t,t,t,t,1f,1f,1f,0,0,ta
+t,t,t,t,t,t,t,t,t,t,t,1f,1f,0,0,0
+t,t,t,t,t,t,t,t,t,t,1f,1f,1f,0,0,0
 t,t,t,t,t,t,t,t,1f,1f,1f,1f,0,0,0,t
-0,t,t,t,t,t,1f,1f,1f,1f,1f,1f,0,0,t,t
-0,0,t,1f,1f,1f,1f,1f,1f,0,0,0,0,0,t,0
-0,b,0,t,1f,1f,1f,0,0,0,0,0,0,t,t,b
-0,0,0,0,t,1f,0,0,0,0,0,0,t,t,0,0
-0,0,c,0,0,t,t,t,t,t,t,t,t,0,0,c
+m,t,t,t,t,t,1f,1f,1f,1f,1f,1f,0,0,t,t
+m,m,t,1f,1f,1f,1f,1f,1f,0,0,0,0,0,t,m
+0,b,m,t,1f,1f,1f,0,0,0,0,0,0,t,t,b
+0,0,m,m,t,1f,0,0,0,0,0,0,t,t,m,m
+0,0,c,m,m,t,t,t,t,t,t,t,t,m,m,c
 NAME comet 1
 EXT 7,5 e 0,14
 PAL 4
 
 ROOM e
 1h,1h,1h,1h,1h,1h,1h,1h,1h,1h,1h,1h,1h,1h,1h,1h
-1n,0,0,0,0,0,1p,0,0,0,0,0,0,0,0,0
+1n,m,m,m,m,m,1p,m,m,m,m,m,m,m,m,m
 0,0,0,0,0,0,0,0,1m,0,0,0,0,0,0,1m
 k,1h,1h,1h,1h,1h,1h,1h,1h,1h,1h,k,1h,1h,1h,1h
-k,0,0,0,0,0,0,0,1h,0,0,k,0,0,0,0
+k,m,m,m,m,m,m,m,1h,m,m,k,m,m,m,m
 k,0,1m,0,0,0,0,0,1h,0,0,k,0,0,0,0
 1h,1h,1h,1h,1h,1h,1h,k,1h,1h,1h,1h,1h,1h,1h,k
-0,0,0,0,1o,1n,0,k,1h,0,1k,0,1k,0,0,k
+m,m,m,m,1o,1n,m,k,1h,m,1k,0,1k,m,m,k
 0,0,0,0,1p,0,0,k,1h,0,1l,0,1l,0,0,k
 k,1h,1h,1h,1h,1h,1h,1h,1h,1h,1h,1h,1h,1h,1h,1h
-k,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1o
+k,m,m,m,m,m,m,m,m,m,m,m,m,m,m,1o
 k,0,1m,0,0,0,1m,0,0,0,0,0,0,0,0,0
-1h,1h,1h,1h,1h,1h,1h,1h,1h,1h,1h,1h,1h,1h,1h,0
-0,0,0,0,0,0,0,0,1o,1n,0,0,0,0,0,k
+1h,1h,1h,1h,1h,1h,1h,1h,1h,1h,1h,1h,1h,1h,1h,k
+m,m,m,m,m,m,m,m,1o,1n,m,m,m,m,m,k
 0,0,0,0,0,1m,0,0,0,1p,0,1m,0,0,0,k
 1h,1h,1h,1h,1h,1h,1h,1h,1h,1h,1h,1h,1h,1h,1h,1h
 NAME comet 2
@@ -438,6 +438,7 @@ ITM e 8,14
 ITM f 11,8
 ITM g 10,2
 ITM h 11,3
+ITM f 3,5
 PAL 4
 
 TIL 10
@@ -592,6 +593,7 @@ TIL b
 00000000
 00001000
 NAME star 1
+WAL true
 
 TIL c
 00000000
@@ -612,6 +614,7 @@ TIL c
 00000010
 00000000
 NAME star 2
+WAL true
 
 TIL d
 00000000
@@ -942,13 +945,22 @@ TIL 1d
 NAME crab
 
 TIL 1e
-00000100
-00001001
+00000101
+00000000
 00010010
+00000000
+01010010
+01100001
+11110100
+01100000
+>
+00000010
+00001001
+00000000
 00101001
-01010110
-11100001
-11110110
+00000100
+01100000
+11110010
 01100000
 NAME comet
 
@@ -1035,6 +1047,7 @@ TIL 1k
 00011000
 00011000
 NAME column 1
+WAL true
 
 TIL 1l
 00011000
@@ -1068,6 +1081,7 @@ TIL 1n
 00110010
 11100000
 NAME cobweb 1
+WAL true
 
 TIL 1o
 10101001
@@ -1079,6 +1093,7 @@ TIL 1o
 01001100
 00000111
 NAME cobweb 2
+WAL true
 
 TIL 1p
 00001000
@@ -1118,7 +1133,7 @@ SPR A
 00111100
 00011000
 11111111
-POS e 10,2
+POS 0 6,11
 
 SPR a
 00000000
@@ -1745,7 +1760,7 @@ DLG SPR_9
 """
 
 DLG ITM_c
-You never knew spiders lived in comets before...
+These creatures have too many legs and too many teeth for you!
 
 DLG ITM_d
 These jars don't smell good. You hope they're sealed up well.
