@@ -61,6 +61,7 @@ NAME bridge
 EXT 13,11 1 8,8
 EXT 2,8 2 7,15
 EXT 13,8 3 7,8
+EXT 6,8 g 7,14
 PAL 0
 
 ROOM 1
@@ -483,8 +484,9 @@ ROOM g
 0,20,0,0,0,0,0,0,0,0,0,0,0,0,20,0
 0,25,1x,0,0,0,0,0,0,0,0,0,0,1x,23,0
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+j,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 NAME telescope
+EXT 0,15 0 7,8
 PAL 0
 
 ROOM i
@@ -532,6 +534,52 @@ EXT 6,10 g 6,10
 EXT 8,10 g 8,10
 EXT 7,11 g 7,11
 PAL 0
+
+ROOM k
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,q,q,q,0,0,0,0,q,q,q,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,q,q,q,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,1s,1s,1s,0,0
+m,m,m,m,m,m,m,m,m,2d,1q,1v,1v,1v,1r,0
+0,0,0,0,0,0,0,0,0,0,0,1v,1v,1v,0,1u
+0,0,0,0,0,0,0,0,0,0,1r,1s,1s,1s,1q,0
+12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12
+0,12,0,12,0,0,0,12,12,12,12,12,0,12,12,12
+12,12,0,0,0,12,12,12,0,0,0,12,0,0,12,0
+NAME tryttlex 2
+ITM k 3,3
+ITM k 6,5
+ITM k 10,3
+PAL 5
+
+ROOM l
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,q,q,q,0,0,0,0,q,q,q,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,2e,0,q,q,q,0,0,2e,0,0,0,0,0
+0,0,0,17,0,0,0,0,0,0,17,0,0,0,0,0
+0,0,0,0,0,0,2e,0,0,0,0,0,0,0,0,0
+0,0,0,1a,0,0,0,0,0,0,1b,0,0,0,0,0
+0,0,0,0,0,0,17,0,0,0,0,0,0,0,0,0
+0,0,0,17,0,0,0,0,0,0,18,0,0,0,0,0
+0,0,0,0,0,0,1b,0,0,0,0,1s,1s,1s,0,0
+m,m,m,0,m,m,m,m,m,2d,1q,1v,1v,1v,1r,0
+0,0,0,1a,0,0,1b,0,0,0,0,1v,1v,1v,0,1u
+0,0,0,0,0,0,0,0,0,0,1r,1s,1s,1s,1q,0
+12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12
+0,12,0,12,0,0,0,12,12,12,12,12,0,12,12,12
+12,12,0,0,0,12,12,12,0,0,0,12,0,0,12,0
+NAME tryttlex 3
+ITM 3 10,9
+ITM 3 6,12
+ITM 3 3,12
+PAL 5
 
 TIL 10
 00000000
@@ -1397,9 +1445,9 @@ WAL true
 TIL 1u
 11000000
 01100011
-00100101
+00100100
 00111000
-00111011
+00111000
 01100100
 11000011
 10000000
@@ -1407,7 +1455,7 @@ TIL 1u
 11000000
 01100011
 00100100
-00111011
+00111000
 00111000
 01100100
 11000011
@@ -1549,6 +1597,37 @@ TIL 2c
 00000000
 00000000
 
+TIL 2d
+00000000
+00000000
+00000000
+00000000
+00000000
+01111110
+11000011
+10000001
+NAME ship wall 6
+WAL true
+
+TIL 2e
+00011000
+11011000
+01111111
+00100100
+111101101
+00111111
+01101101
+01001000
+>
+00011000
+11011000
+01111111
+00100100
+11110110
+00111111
+01101101
+01001000
+
 SPR 10
 00001010
 00000100
@@ -1575,6 +1654,70 @@ NAME cat-telescope
 DLG SPR_j
 POS g 9,14
 
+SPR 12
+00000000
+00000000
+01010001
+01110001
+01110010
+01111100
+00111100
+00100100
+NAME cat tryttlex 2
+DLG SPR_m
+POS k 9,12
+
+SPR 13
+01111000
+00111011
+00010110
+11111100
+10111000
+10111000
+00101100
+01100110
+NAME skelindarl
+DLG SPR_k
+POS k 3,12
+
+SPR 14
+00000000
+00000000
+00000000
+00011000
+00001000
+01111110
+01000010
+01111110
+NAME secret weapon
+DLG SPR_n
+POS k 14,11
+
+SPR 15
+00000000
+00000000
+00000000
+00000000
+00000000
+01111110
+01000010
+01111110
+NAME used secret weapon
+DLG SPR_o
+POS l 14,11
+
+SPR 16
+00000000
+00000000
+01010001
+01110001
+01110010
+01111100
+00111100
+00100100
+NAME cat tryttlex 3
+DLG SPR_p
+
 SPR A
 01000010
 01100110
@@ -1593,7 +1736,7 @@ SPR A
 00111100
 00011000
 11111111
-POS g 7,14
+POS 0 6,12
 
 SPR a
 00000000
@@ -1921,6 +2064,7 @@ ITM 3
 00101100
 00011000
 NAME diamond
+DLG ITM_f
 
 ITM 4
 00000100
@@ -2126,6 +2270,25 @@ ITM j
 00000000
 NAME portal 2
 
+ITM k
+01100110
+00111100
+00100100
+00111100
+00111100
+11111111
+01111110
+01000010
+>
+01100110
+00111100
+00100100
+00111100
+10111101
+11111111
+01111110
+01000010
+
 DLG SPR_0
 """
 {sequence
@@ -2194,7 +2357,10 @@ DLG ITM_4
   - bottleMessage == 10 ?
     You'd better get out of here as quick as you can! {bottleMessage = bottleMessage + 1}
     {bottle = bottle + 1}
-  - else ?
+  - bottleMessage == 20 ?
+    There's a message in this one... "Property of Skelindarl! Do not steal or you will get trouble!"{bottleMessage = bottleMessage + 1}
+{stoleRum = 1}
+  - {item "0"} == 1 ?
     {bottleMessage = bottleMessage + 1}
 {bottle = bottle + 1}
 }
@@ -2306,9 +2472,6 @@ DLG SPR_b
 }
 """
 
-DLG SPR_c
-I'm a telescope
-
 DLG SPR_d
 """
 {sequence
@@ -2317,8 +2480,8 @@ DLG SPR_d
   - I'm glad I don't have to make this deal all alone!
   - What can you see ahead of us?
 }{
-  - {item "0"} == 1 ?
-
+  - checkedTelescope == 1 ?
+    (exit "tryttlex 2,7,12")
   - else ?
 
 }
@@ -2354,6 +2517,77 @@ DLG SPR_j
 }
 """
 
+DLG SPR_c
+"""
+{
+  - telescopeSkill <= 2 ?
+    You blink through the telescope but it's hard to get it focussed. You can't see anything.{checkedTelescope = 1}
+  - telescopeSkill <= 4 ?
+    You're smoothly approaching the rendezvous point.{checkedTelescope = 1}
+  - else ?
+    You can see the rendezvous point clearly... and what's that? It seems like your contact brought company!{checkedTelescope = 1}
+{forewarned = 1}
+}
+"""
+
+DLG SPR_k
+"""
+Hah! So you've come to deliver the rum for Grorgronn...{
+  - stoleRum == 1 ?
+    Even though you stole rum from me, Skelindarl!
+  - else ?
+    But I, Skelindarl, will take all the credit. Ahaha! You can't defeat my flying friends up above us!
+}
+"""
+
+DLG SPR_l
+"""
+{
+  - forewarned == 1 ?
+    Don't worry, Captain. Our plan to 
+  - else ?
+
+}
+"""
+
+DLG SPR_m
+"""
+{
+  - forewarned == 1 ?
+    Don't worry, Captain. Our plan to defeat these pirates is all worked out.{catAdvice = 1}
+  - else ?
+    I'm sorry, Captain, I have no ideas to stop them! I think we have to give up the rum.{grorgronnBottle = 0}
+{defeated = 1}{catAdvice = 1}
+}
+"""
+
+DLG SPR_n
+"""
+{
+  - catAdvice < 1 ?
+    The Space Smuggler's Guide advises always checking with your cat before using a secret weapon!
+  - defeat == 1 ?
+    The only thing for it is to go home and count your losses.(exit "bridge,7,10")
+  - defeat == 0 ?
+    Luckily, you primed these explosives in advance!(exit "tryttlex 3,11,14")
+}
+"""
+
+DLG SPR_o
+That was the only trick we had. Now let's go home!(exit "bridge,7,10")
+
+DLG ITM_f
+"""
+{sequence
+  - A perfect shiny diamond!
+  - You definitely deserve this.
+  - What a lovely reward.
+}
+"""
+
+DLG SPR_p
+Great work, Captain!
+
 VAR hasCoffeepot
 0
 
@@ -2388,5 +2622,11 @@ VAR images
 0
 
 VAR prettyImages
+0
+
+VAR checkedTelescope
+0
+
+VAR stoleRum
 0
 
