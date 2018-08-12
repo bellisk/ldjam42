@@ -49,19 +49,19 @@ a,0,0,0,0,0,0,0,b,0,0,0,0,c,0,a
 a,0,0,0,c,0,0,0,0,0,0,0,0,0,0,a
 a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-0,0,e,0,0,0,g,0,0,0,d,0,0,h,0,0
+0,0,e,0,0,0,g,0,0,i,0,0,0,h,0,0
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-0,0,f,0,0,0,0,0,0,0,0,0,0,i,0,0
+0,0,f,0,0,0,0,0,0,0,0,0,0,0,0,0
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 NAME bridge
-EXT 13,11 1 8,8
 EXT 2,8 2 7,15
 EXT 13,8 3 7,8
 EXT 6,8 g 7,14
+EXT 9,8 1 6,8
 PAL 0
 
 ROOM 1
@@ -86,7 +86,7 @@ ITM 5 2,11
 ITM 6 3,2
 ITM 7 11,6
 ITM d 12,2
-EXT 0,15 0 12,11
+EXT 0,15 0 10,8
 EXT 2,11 4 0,11
 EXT 3,2 5 0,14
 EXT 11,6 6 7,6
@@ -1614,7 +1614,7 @@ TIL 2e
 11011000
 01111111
 00100100
-111101101
+11110110
 00111111
 01101101
 01001000
@@ -1785,6 +1785,7 @@ SPR d
 01000010
 01111110
 NAME chest
+DLG SPR_r
 POS 8 9,14
 
 SPR e
@@ -1846,6 +1847,7 @@ SPR m
 01010100
 01101100
 01111100
+DLG SPR_q
 POS 3 3,12
 
 SPR n
@@ -1872,6 +1874,7 @@ SPR o
 00011000
 NAME sign 1
 DLG SPR_4
+POS 4 5,12
 
 SPR p
 11111111
@@ -2307,14 +2310,15 @@ Welcome to the holotelephony room, Captain! Just pick the contact you want to sp
 DLG SPR_2
 """
 AHA!!! You have come to prostrate yourself before GRAND MOLLUSC MURPHY!!! {
-  - {item "coffeepot"} > 0 ?
-    Nothing pleases GRAND MOLLUSC MURPHY more than delicious coffee!! Give it to me!! {item "coffeepot" item "coffeepot" 1}
+  - hasCoffeepot > 0 ?
+    Nothing pleases GRAND MOLLUSC MURPHY more than delicious coffee!! Give it to me!! {hasCoffeepot = 0}
+    {murphyFavour = 1}
+  - {item "diamond"} > 0 ?
+    Do you think this measly diamond will satisfy GRAND MOLLUSC MURPHY? {murphyFavour = 0}
+  - {item "skull"} > 0 ?
+    Do you dare present this revolting skull to satisfy GRAND MOLLUSC MURPHY?{murphyFavour = 0}
   - else ?
     Bah! You cannot please me, fool!
-  - {item "diamond"} > 0 ?
-    Do you think this measly diamond will satisfy GRAND MOLLUSC MURPHY?
-  - {item "skull"} > 0 ?
-    Do you dare present this revolting skull to satisfy GRAND MOLLUSC MURPHY?
 }
 """
 
@@ -2395,6 +2399,8 @@ DLG SPR_7
 {
   - metGrorgronn == 0 ?
     The immortal GRORGRONN accepts your call! I expect you to make a rum pickup from the usual place.... Once you've got the bottles, the immortal GRORGRONN will tell you where to take them.{metGrorgronn = 1}
+  - grorgronnFavour == 1 ?
+    The immortal GRORGRONN thanks you for saving their Nebula rum from Skelindar! You will be rewarded richly!
   - grorgronnBottle == 0 ?
     My sensors tell me you still have not picked up my rum bottles. Do not anger the immortal GRORGRONN!
   - grorgronnBottle > 0 ?
@@ -2574,7 +2580,7 @@ DLG SPR_n
 """
 
 DLG SPR_o
-That was the only trick we had. Now let's go home!(exit "bridge,7,10")
+That was the only trick we had. Now let's go home!{grorgronnFavour = 1}(exit "bridge,7,10")
 
 DLG ITM_f
 """
@@ -2587,6 +2593,29 @@ DLG ITM_f
 
 DLG SPR_p
 Great work, Captain!
+
+DLG SPR_q
+"""
+{
+  - fforbinaspFavour > 3 ?
+    {fforbinaspFavour = 0}How charming your star images are! Here, this is a fair exchange: take this Universal Unlocking Key as a gift!{key = 1}
+  - prettyImages < 1 ?
+    My dear smuggler, Fforbinasp the Inscrutable needs nothing from you. How nice of you to ask.
+  - else ?
+    My dearest space criminal, what wonderful pictures I see in your inventory! I would love just a few.{fforbinaspFavour = prettyImages}
+    {prettyImages = 0}
+}
+"""
+
+DLG SPR_r
+"""
+{
+  - key == 1 ?
+    The Universal Unlocking Key opens the chest! Inside is an old coffeepot.{hasCoffeepot = 1}
+  - else ?
+    There's an old chest down here, but it's locked up tight.
+}
+"""
 
 VAR hasCoffeepot
 0
