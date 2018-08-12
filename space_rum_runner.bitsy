@@ -58,7 +58,7 @@ a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 NAME bridge
-EXT 2,8 2 7,15
+EXT 2,8 2 2,15
 EXT 13,8 3 7,8
 EXT 6,8 g 7,14
 EXT 9,8 1 6,8
@@ -112,9 +112,6 @@ m,m,m,m,m,m,k,m,m,k,m,m,m,m,m,m
 m,m,m,m,m,m,k,m,m,k,m,m,m,m,m,m
 j,0,0,0,0,0,k,0,0,k,0,0,0,0,0,0
 NAME storage
-ITM l 10,11
-ITM m 10,7
-ITM n 5,7
 EXT 0,15 0 3,8
 PAL 0
 
@@ -2118,6 +2115,76 @@ NAME bottle
 DLG SPR_t
 POS 2 5,11
 
+SPR 1c
+00111000
+01000100
+10101010
+10101010
+10010010
+11000110
+01000100
+01111100
+DLG SPR_u
+POS 2 10,11
+
+SPR 1d
+00011000
+00101100
+01011110
+10111111
+10011101
+01001010
+00101100
+00011000
+DLG SPR_v
+POS 2 10,7
+
+SPR 1e
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+
+SPR 1f
+00000100
+00011111
+11010001
+01011111
+01010001
+01110001
+00110001
+00111111
+DLG SPR_w
+POS 2 5,7
+
+SPR 1g
+00011111
+00100010
+00100010
+00100010
+00100010
+00100010
+01000100
+11111000
+DLG SPR_x
+POS 2 10,3
+
+SPR 1h
+11111111
+10100001
+11110001
+10100101
+10001111
+10000101
+10000001
+11111111
+DLG SPR_y
+POS 2 5,3
+
 ITM 1
 00011000
 00011000
@@ -2376,28 +2443,6 @@ ITM k
 11111111
 01111110
 01000010
-
-ITM l
-00111000
-01000100
-10101010
-10101010
-10010010
-11000110
-01000100
-01111100
-DLG ITM_g
-
-ITM n
-00000100
-00011111
-11010001
-01011111
-01010001
-01110001
-00110001
-00111111
-DLG ITM_i
 
 DLG SPR_0
 """
@@ -2730,14 +2775,30 @@ Good evening, Captain! If you go to bed, you'll end the game and see your final 
 DLG SPR_t
 You have {print bottle} bottles of highly illegal Nebula rum!
 
-DLG ITM_g
-You have {print skull} disgusting human skull(s)!
-
 DLG ITM_h
 You have {print diamond} shiny, mysterious diamonds!
 
-DLG ITM_i
-You have {print coffeepot} delicious hot pots of coffee!
+DLG SPR_u
+You have {print item "skull"} disgusting old human skulls!
+
+DLG SPR_v
+You have {print item "diamond"} mysterious, shiny diamonds!
+
+DLG SPR_w
+You have {print item "coffeepot"} delicious hot pots of coffee!
+
+DLG SPR_x
+"""
+You have {print item "letter"} letters to you!{
+  - {item "letter"} == 1 ?
+    The letter says: Dear Space Smuggler, we hope you enjoy the beautiful beach here. It's so nice when business and pleasure mix! Love, Grorgronn's Smuggling Gang,
+  - else ?
+
+}
+"""
+
+DLG SPR_y
+You have {print images} regular pictures of space, and {print prettyImages} really nice ones!
 
 END 0
 
