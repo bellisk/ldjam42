@@ -418,14 +418,14 @@ PAL 4
 
 ROOM e
 1h,1h,1h,1h,1h,1h,1h,1h,1h,1h,1h,1h,1h,1h,1h,1h
-1n,0,0,0,0,0,1p,0,0,0,0,0,0,0,1k,1j
-0,0,0,0,0,0,0,0,1m,0,0,0,0,0,1l,1i
-k,1h,1h,1h,1h,1h,1h,1h,1h,1h,1h,1h,1h,1h,1h,1h
-k,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-k,0,1m,0,0,0,0,0,0,0,1m,0,0,0,0,0
-1h,1h,1h,1h,1h,1h,1h,1h,1h,1h,1h,1h,1h,1h,1h,k
-0,0,0,0,1o,1n,0,0,1p,0,0,0,0,0,0,k
-0,0,0,0,1p,0,0,0,0,0,1m,0,0,0,0,k
+1n,0,0,0,0,0,1p,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,1m,0,0,0,0,0,0,1m
+k,1h,1h,1h,1h,1h,1h,1h,1h,1h,1h,k,1h,1h,1h,1h
+k,0,0,0,0,0,0,0,1h,0,0,k,0,0,0,0
+k,0,1m,0,0,0,0,0,1h,0,0,k,0,0,0,0
+1h,1h,1h,1h,1h,1h,1h,k,1h,1h,1h,1h,1h,1h,1h,k
+0,0,0,0,1o,1n,0,k,1h,0,1k,0,1k,0,0,k
+0,0,0,0,1p,0,0,k,1h,0,1l,0,1l,0,0,k
 k,1h,1h,1h,1h,1h,1h,1h,1h,1h,1h,1h,1h,1h,1h,1h
 k,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1o
 k,0,1m,0,0,0,1m,0,0,0,0,0,0,0,0,0
@@ -437,6 +437,7 @@ NAME comet 2
 ITM e 8,14
 ITM f 11,8
 ITM g 10,2
+ITM h 11,3
 PAL 4
 
 TIL 10
@@ -812,15 +813,23 @@ NAME rocks 2
 
 TIL u
 00000000
-01110111
-11011101
+11111111
 00000000
 00000000
-10111011
-11101110
+01111110
+10000001
 00000000
-NAME water
-WAL true
+00011000
+>
+00000000
+00000000
+01111110
+10000001
+00000000
+00111100
+11000011
+00000000
+NAME portal 2
 
 TIL v
 00000000
@@ -1109,7 +1118,7 @@ SPR A
 00111100
 00011000
 11111111
-POS 0 7,11
+POS e 10,2
 
 SPR a
 00000000
@@ -1276,7 +1285,7 @@ SPR r
 01111111
 01100111
 00011111
-00110111
+00110110
 01101100
 11011000
 NAME guardian 1
@@ -1295,17 +1304,48 @@ SPR s
 NAME guardian 2
 POS e 13,2
 
-ITM 0
+SPR t
+01100110
+10000001
+10011001
+00100100
+00100100
+10011001
+10000001
+01100110
+>
+00111100
+01000010
+10000001
+10011001
+10011001
+10000001
+01000010
+00111100
+NAME portal 1
+DLG SPR_b
+POS e 11,8
+
+SPR u
+00000000
+11111111
 00000000
 00000000
+01111110
+10000001
+00000000
+00011000
+>
+00000000
+00000000
+01111110
+10000001
 00000000
 00111100
-01100100
-00100100
-00011000
+11000011
 00000000
-NAME tea
-DLG ITM_0
+NAME portal 2
+POS e 11,7
 
 ITM 1
 00011000
@@ -1495,6 +1535,57 @@ ITM g
 NAME guardian text 
 DLG ITM_e
 
+ITM h
+11111111
+10011001
+10011001
+11111111
+11111111
+10011001
+10011001
+11111111
+NAME trapdoor
+
+ITM i
+01100110
+10000001
+10011001
+00100100
+00100100
+10011001
+10000001
+01100110
+>
+00111100
+01000010
+10000001
+10011001
+10011001
+10000001
+01000010
+00111100
+NAME portal 1
+
+ITM j
+00000000
+11111111
+00000000
+00000000
+01111110
+10000001
+00000000
+00011000
+>
+00000000
+00000000
+01111110
+10000001
+00000000
+00111100
+11000011
+00000000
+NAME portal 2
+
 DLG SPR_0
 """
 {sequence
@@ -1637,9 +1728,18 @@ This icy ball of rock is dark and treacherous.
 DLG SPR_9
 """
 {
-  - grorgronnBottle > 0 ?
+  - diamond > 0 ?
     Hmm, a diamond? A crunchy delight. My thanks!{diamond = 0}
-  - hasCoffeepot == 1 ?
+  - tryttlexViCoords > 0 ?
+    Oh, it's off to Tryttlex VI with you, is it? Very well. You may enter the portal.{guardianPermission = 1}
+  - metGrorgronn > 0 ?
+    Greetings, visitor. It seems we have an acquaintance in common. 
+  - {item "0"} == 1 ?
+    Greetings, visitor. You are welcome here. 
+}{
+  - tryttlexViCoords == 0 ?
+    But until you know where you are going, the Portal can only send you {wvy}home{wvy}.
+  - else ?
 
 }
 """
@@ -1652,6 +1752,19 @@ These jars don't smell good. You hope they're sealed up well.
 
 DLG ITM_e
 What kind of creature is that?
+
+DLG SPR_a
+(exit "tryttlex,7,7")
+
+DLG SPR_b
+"""
+{
+  - guardianPermission == 1 ?
+    (exit "tryttlex,7,7")
+  - else ?
+    (exit "bridge,7,11")
+}
+"""
 
 VAR hasCoffeepot
 0
@@ -1672,5 +1785,8 @@ VAR tryttlexViCoords
 0
 
 VAR diamond
+0
+
+VAR guardianPermission
 0
 
