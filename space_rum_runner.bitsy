@@ -28,6 +28,12 @@ NAME planet 2
 219,84,15
 255,27,39
 
+PAL 4
+NAME comet
+48,15,28
+255,63,236
+255,27,39
+
 ROOM 0
 a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a
 a,0,0,0,0,0,c,0,0,0,0,0,0,0,b,a
@@ -72,10 +78,12 @@ NAME map
 ITM 5 2,11
 ITM 6 3,2
 ITM 7 11,6
+ITM d 12,2
 EXT 0,15 0 12,11
 EXT 2,11 4 0,11
 EXT 3,2 5 0,14
 EXT 11,6 6 7,6
+EXT 12,2 d 1,8
 PAL 1
 
 ROOM 2
@@ -357,6 +365,8 @@ NAME planet 2b
 EXT 8,15 c 8,0
 EXT 9,15 c 9,0
 EXT 10,15 c 10,0
+EXT 10,0 a 10,15
+EXT 11,0 a 11,15
 PAL 3
 
 ROOM c
@@ -380,7 +390,54 @@ NAME planet 2c
 ITM c 5,2
 ITM c 14,10
 ITM c 2,10
+EXT 9,0 b 9,15
+EXT 10,0 b 10,15
+EXT 11,0 b 11,15
 PAL 3
+
+ROOM d
+0,b,0,0,0,t,t,t,t,t,t,t,t,0,c,0
+0,0,0,0,t,t,t,t,t,t,t,t,t,t,t,0
+0,0,t,t,t,t,t,t,t,t,t,t,t,1f,1f,t
+c,0,t,t,t,t,t,t,t,t,t,t,t,1f,1f,t
+0,t,t,t,t,t,t,t,t,t,t,t,t,1f,1f,t
+t,t,t,t,t,t,t,1g,t,t,t,t,t,1f,1f,t
+t,t,t,t,t,t,t,t,t,t,t,t,1f,1f,0,t
+t,t,t,t,t,t,t,t,t,t,t,1f,1f,1f,0,t
+t,t,t,t,t,t,t,t,t,t,t,1f,1f,0,0,ta
+t,t,t,t,t,t,t,t,t,t,1f,1f,1f,0,0,ta
+t,t,t,t,t,t,t,t,1f,1f,1f,1f,0,0,0,t
+0,t,t,t,t,t,1f,1f,1f,1f,1f,1f,0,0,t,t
+0,0,t,1f,1f,1f,1f,1f,1f,0,0,0,0,0,t,0
+0,b,0,t,1f,1f,1f,0,0,0,0,0,0,t,t,b
+0,0,0,0,t,1f,0,0,0,0,0,0,t,t,0,0
+0,0,c,0,0,t,t,t,t,t,t,t,t,0,0,c
+NAME comet 1
+EXT 7,5 e 0,14
+PAL 4
+
+ROOM e
+1h,1h,1h,1h,1h,1h,1h,1h,1h,1h,1h,1h,1h,1h,1h,1h
+1n,0,0,0,0,0,1p,0,0,0,0,0,0,0,1k,1j
+0,0,0,0,0,0,0,0,1m,0,0,0,0,0,1l,1i
+k,1h,1h,1h,1h,1h,1h,1h,1h,1h,1h,1h,1h,1h,1h,1h
+k,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+k,0,1m,0,0,0,0,0,0,0,1m,0,0,0,0,0
+1h,1h,1h,1h,1h,1h,1h,1h,1h,1h,1h,1h,1h,1h,1h,k
+0,0,0,0,1o,1n,0,0,1p,0,0,0,0,0,0,k
+0,0,0,0,1p,0,0,0,0,0,1m,0,0,0,0,k
+k,1h,1h,1h,1h,1h,1h,1h,1h,1h,1h,1h,1h,1h,1h,1h
+k,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1o
+k,0,1m,0,0,0,1m,0,0,0,0,0,0,0,0,0
+1h,1h,1h,1h,1h,1h,1h,1h,1h,1h,1h,1h,1h,1h,1h,0
+0,0,0,0,0,0,0,0,1o,1n,0,0,0,0,0,k
+0,0,0,0,0,1m,0,0,0,1p,0,1m,0,0,0,k
+1h,1h,1h,1h,1h,1h,1h,1h,1h,1h,1h,1h,1h,1h,1h,1h
+NAME comet 2
+ITM e 8,14
+ITM f 11,8
+ITM g 10,2
+PAL 4
 
 TIL 10
 00000000
@@ -873,6 +930,166 @@ TIL 1d
 00111000
 01111100
 00111000
+NAME crab
+
+TIL 1e
+00000100
+00001001
+00010010
+00101001
+01010110
+11100001
+11110110
+01100000
+NAME comet
+
+TIL 1f
+00000000
+00000000
+00100101
+01010010
+00100000
+00001100
+00101010
+00000100
+NAME rocks 3
+
+TIL 1g
+10111000
+01000101
+11000010
+10000011
+10000010
+11000011
+01100100
+10011010
+
+TIL 1h
+01101101
+11011010
+10110100
+01101001
+11010010
+10100100
+01001001
+10010010
+NAME floor
+WAL true
+
+TIL 1i
+01100110
+10000001
+10011001
+00100100
+00100100
+10011001
+10000001
+01100110
+>
+00111100
+01000010
+10000001
+10011001
+10011001
+10000001
+01000010
+00111100
+NAME portal 1
+
+TIL 1j
+00000000
+11111111
+00000000
+00000000
+01111110
+10000001
+00000000
+00011000
+>
+00000000
+00000000
+01111110
+10000001
+00000000
+00111100
+11000011
+00000000
+NAME portal 2
+
+TIL 1k
+11111111
+01111110
+00111100
+00011000
+00011000
+00011000
+00011000
+00011000
+NAME column 1
+
+TIL 1l
+00011000
+00011000
+00011000
+00011000
+00011000
+00111100
+01111110
+11111111
+NAME column 2
+
+TIL 1m
+00111000
+01111100
+00010000
+00101000
+01010100
+10101010
+11010110
+11111110
+NAME vase
+
+TIL 1n
+10010101
+01100101
+01101011
+10010010
+00101100
+11001100
+00110010
+11100000
+NAME cobweb 1
+
+TIL 1o
+10101001
+10100110
+11010110
+01001001
+00110100
+00110011
+01001100
+00000111
+NAME cobweb 2
+
+TIL 1p
+00001000
+00001000
+00101010
+01011101
+00111110
+01011101
+00101010
+00000000
+>
+00101010
+01011101
+00111110
+01011101
+00101010
+00000000
+00000000
+00000000
+NAME spider
 
 SPR A
 01000010
@@ -892,7 +1109,7 @@ SPR A
 00111100
 00011000
 11111111
-POS 0 6,12
+POS 0 7,11
 
 SPR a
 00000000
@@ -905,7 +1122,7 @@ SPR a
 00100100
 NAME cat
 DLG SPR_0
-POS 0 9,13
+POS 0 9,14
 
 SPR b
 01111110
@@ -1026,7 +1243,6 @@ SPR o
 00011000
 NAME sign 1
 DLG SPR_4
-POS c 11,6
 
 SPR p
 11111111
@@ -1053,6 +1269,31 @@ SPR q
 NAME grogronn sign
 DLG SPR_8
 POS c 11,6
+
+SPR r
+00010000
+01110000
+01111111
+01100111
+00011111
+00110111
+01101100
+11011000
+NAME guardian 1
+DLG SPR_9
+POS e 12,2
+
+SPR s
+00001111
+00001000
+11111100
+11110110
+10010011
+00110110
+01100100
+11001100
+NAME guardian 2
+POS e 13,2
 
 ITM 0
 00000000
@@ -1197,6 +1438,63 @@ ITM c
 NAME grogronnBottle
 DLG ITM_a
 
+ITM d
+00000101
+00000000
+00010010
+00000000
+01010010
+01100001
+11110100
+01100000
+>
+00000010
+00001001
+00000000
+00101001
+00000100
+01100000
+11110010
+01100000
+NAME comet
+DLG ITM_b
+
+ITM e
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+NAME spider text 1
+DLG ITM_c
+
+ITM f
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+NAME jar text 1
+DLG ITM_d
+
+ITM g
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+NAME guardian text 
+DLG ITM_e
+
 DLG SPR_0
 """
 {sequence
@@ -1303,7 +1601,7 @@ DLG SPR_7
   - grorgronnBottle == 0 ?
     My sensors tell me you still have not picked up my rum bottles. Do not anger the immortal GRORGRONN!
   - grorgronnBottle > 0 ?
-    It pleases me that you are following our agreement! Now drop off the bottles to our friend on Tryttlex VI!
+    It pleases me that you are following our agreement! Now drop off the bottles to our friend on Tryttlex VI! Here are the coordinates.{tryttlexViCoords = 1}
 }
 """
 
@@ -1311,10 +1609,12 @@ DLG ITM_a
 """
 {sequence
   - {hasBottle = 1}
-{grorgronnBottle = 1}
+{grorgronnBottle = grorgronnBottle + 1}
 {bottle = bottle + 1}The only clues to what's buried here are some abandoned bottles of Nebula Rum...
-  - {bottle = bottle + 1}Unfortunately, these are all empty.
-  - {bottle = bottle + 1}Still, this must be Grorgronn's stash!
+  - {bottle = bottle + 1}
+{grorgronnBottle = grorgronnBottle + 1}Unfortunately, these are all empty.
+  - {bottle = bottle + 1}
+{grorgronnBottle = grorgronnBottle + 1}But they do have Grorgronn's seal on their labels!
 }
 """
 
@@ -1331,6 +1631,28 @@ DLG SPR_8
 }
 """
 
+DLG ITM_b
+This icy ball of rock is dark and treacherous.
+
+DLG SPR_9
+"""
+{
+  - grorgronnBottle > 0 ?
+    Hmm, a diamond? A crunchy delight. My thanks!{diamond = 0}
+  - hasCoffeepot == 1 ?
+
+}
+"""
+
+DLG ITM_c
+You never knew spiders lived in comets before...
+
+DLG ITM_d
+These jars don't smell good. You hope they're sealed up well.
+
+DLG ITM_e
+What kind of creature is that?
+
 VAR hasCoffeepot
 0
 
@@ -1344,5 +1666,11 @@ VAR grorgronnBottle
 0
 
 VAR metGrorgronn
+0
+
+VAR tryttlexViCoords
+0
+
+VAR diamond
 0
 
