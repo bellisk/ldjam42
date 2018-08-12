@@ -52,7 +52,7 @@ a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a
 0,0,e,0,0,0,g,0,0,i,0,0,0,h,0,0
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-0,0,f,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,f,0,0,0,0,0,0,0,0,0,0,2f,0,0
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
@@ -62,6 +62,7 @@ EXT 2,8 2 7,15
 EXT 13,8 3 7,8
 EXT 6,8 g 7,14
 EXT 9,8 1 6,8
+EXT 13,11 m 6,15
 PAL 0
 
 ROOM 1
@@ -121,6 +122,7 @@ ITM 2 10,11
 ITM 3 10,7
 ITM 4 11,11
 EXT 0,15 0 3,8
+END undefined 5,11
 PAL 0
 
 ROOM 3
@@ -580,6 +582,27 @@ ITM 3 10,9
 ITM 3 6,12
 ITM 3 3,12
 PAL 5
+
+ROOM m
+a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a
+a,0,0,0,0,0,c,0,0,0,0,0,b,0,0,a
+a,0,c,0,0,0,0,0,0,0,0,0,0,0,0,a
+a,0,0,0,0,0,0,0,0,o,0,0,0,p,0,a
+a,0,0,0,0,b,0,0,0,0,0,0,0,0,0,a
+a,1e,0,0,0,0,0,0,0,0,0,c,0,0,0,a
+a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,1y,1x,23,0,0,0,0,0,0
+0,0,0,25,1x,1x,k,2i,1x,23,0,0,0,0,0,0
+0,0,0,25,1x,1x,k,1x,1x,23,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+NAME ending
+END undefined 6,9
+PAL 0
 
 TIL 10
 00000000
@@ -1628,6 +1651,47 @@ TIL 2e
 01101101
 01001000
 
+TIL 2f
+00000000
+00000000
+00000001
+00000111
+10001001
+11111111
+11111111
+10000001
+
+TIL 2g
+00100000
+01110000
+11111000
+00100000
+00100000
+00100000
+00100000
+01110000
+
+TIL 2h
+00000000
+00000000
+00000000
+01111100
+01000100
+01111100
+01111100
+01000100
+
+TIL 2i
+00101000
+00101000
+11111111
+00000000
+11111111
+00000000
+00000000
+00000000
+WAL true
+
 SPR 10
 00001010
 00000100
@@ -1718,16 +1782,43 @@ SPR 16
 NAME cat tryttlex 3
 DLG SPR_p
 
-SPR A
-01000010
-01100110
-01011010
-01111110
-01100110
+SPR 17
+11000001
+01100011
+00110110
+00011100
+00111000
+01101100
+11000110
+10000011
+NAME end
+
+SPR 18
+00000000
+00000000
+01010001
+01110001
+01110010
+01111100
 00111100
-00011000
-11111111
->
+00100100
+NAME cat bedroom
+DLG SPR_s
+POS m 8,13
+
+SPR 19
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+NAME calculating end text
+POS m 6,12
+
+SPR A
 01000010
 01100110
 01011010
@@ -2033,6 +2124,28 @@ SPR z
 DLG SPR_h
 POS g 2,12
 
+SPR 1a
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+
+SPR 1b
+00011000
+00011000
+00011000
+00100100
+01000010
+01000010
+01000010
+01111110
+DLG SPR_t
+POS 2 4,11
+
 ITM 1
 00011000
 00011000
@@ -2312,7 +2425,7 @@ DLG SPR_2
 AHA!!! You have come to prostrate yourself before GRAND MOLLUSC MURPHY!!! {
   - hasCoffeepot > 0 ?
     Nothing pleases GRAND MOLLUSC MURPHY more than delicious coffee!! Give it to me!! {hasCoffeepot = 0}
-    {murphyFavour = 1}
+    {ending = ending + "You earned favour with MURPHY!"}
   - {item "diamond"} > 0 ?
     Do you think this measly diamond will satisfy GRAND MOLLUSC MURPHY? {murphyFavour = 0}
   - {item "skull"} > 0 ?
@@ -2580,7 +2693,7 @@ DLG SPR_n
 """
 
 DLG SPR_o
-That was the only trick we had. Now let's go home!{grorgronnFavour = 1}(exit "bridge,7,10")
+That was the only trick we had. Now let's go home!{grorgronnFavour = 1}{ending = ending + "You earned favour with GRORGRONN!"}(exit "bridge,7,10")
 
 DLG ITM_f
 """
@@ -2602,7 +2715,7 @@ DLG SPR_q
   - prettyImages < 1 ?
     My dear smuggler, Fforbinasp the Inscrutable needs nothing from you. How nice of you to ask.
   - else ?
-    My dearest space criminal, what wonderful pictures I see in your inventory! I would love just a few.{fforbinaspFavour = prettyImages}
+    My dearest space criminal, what wonderful pictures I see in your inventory! I would love just a few.{fforbinaspFavour = prettyImages}{ending = ending + "You earned favour with FFORBINASP!"}
     {prettyImages = 0}
 }
 """
@@ -2616,6 +2729,18 @@ DLG SPR_r
     There's an old chest down here, but it's locked up tight.
 }
 """
+
+DLG SPR_s
+Good evening, Captain! If you go to bed, you'll end the game and see your final scores.
+
+DLG SPR_t
+You have {print bottle} bottles of highly illegal Nebula rum!
+
+END 0
+
+
+END undefined
+{print ending}
 
 VAR hasCoffeepot
 0
@@ -2658,4 +2783,7 @@ VAR checkedTelescope
 
 VAR stoleRum
 0
+
+VAR ending
+"Well done, Space Rum-Runner!"
 
